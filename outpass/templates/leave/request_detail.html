@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="request">
+      <div class="date">
+          {{ request.date }}
+      </div>
+        {% if request.end_date %}
+            <div class="date">
+                {{ request.end_date }}
+            </div>
+        {% endif %}
+        <h2>{{ request.title }}</h2>
+        <p>{{ request.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}
